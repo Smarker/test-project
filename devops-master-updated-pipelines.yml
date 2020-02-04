@@ -12,7 +12,11 @@ variables:
 steps:
 - task: CmdLine@2
   inputs:
-    script: 'echo "Build requestor: $(Build.RequestedFor)"'
+    script: 'echo "Build requestor id: $(Build.RequestedForId)"'
+
+- task: CmdLine@2
+  inputs:
+    script: 'git config --global user.name "$(Build.RequestedFor)"'
 
 - task: CmdLine@2
   inputs:
