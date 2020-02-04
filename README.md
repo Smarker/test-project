@@ -9,7 +9,6 @@ These directions are largely derived from
       * a devops personal access token
 1. Create an empty repo in Github with the same name as the one in DevOps.
 
-When code is pushed to `master` both `devops-master-updated-pipelines.yml`
-and `github-master-updated-pipelines.yml` pipelines will be triggered.
-
-Before pushing code to github, it is necessary to set up
+When code is pushed to the `master` branch of DevOps, both
+`devops-master-updated-pipelines.yml` and `github-master-updated-pipelines.yml`
+pipelines will be triggered.
