@@ -1,4 +1,4 @@
-# Pull changes from github then push latest devops changes to github
+# Pull changes from github then push latest github changes to devops
 
 trigger:
 - master
