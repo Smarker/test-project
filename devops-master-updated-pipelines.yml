@@ -12,7 +12,7 @@ variables:
 steps:
 - task: CmdLine@2
   inputs:
-    script: 'git pull https://github.com/Smarker/test-project.git master'
+    script: 'git pull https://$(githubpersonaltoken)@github.com/Smarker/test-project.git master'
 
 - task: CmdLine@2
   inputs:
