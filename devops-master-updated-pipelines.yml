@@ -12,7 +12,11 @@ variables:
 steps:
 - task: CmdLine@2
   inputs:
-    script: 'git pull https://$(githubpersonaltoken)@github.com/Smarker/test-project.git master'
+    script: 'echo "Build requestor: $(Build.RequestedFor)'
+
+- task: CmdLine@2
+  inputs:
+    script: 'git pull https://github.com/Smarker/test-project.git master'
 
 - task: CmdLine@2
   inputs:
