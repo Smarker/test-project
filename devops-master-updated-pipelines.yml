@@ -12,7 +12,7 @@ variables:
 steps:
 - task: CmdLine@2
   inputs:
-    script: 'echo "Build requestor: $(Build.RequestedFor)'
+    script: 'echo "Build requestor: $(Build.RequestedFor)"'
 
 - task: CmdLine@2
   inputs:
