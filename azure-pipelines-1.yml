@@ -1,0 +1,19 @@
+# Pull changes from github then push latest devops changes to github
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+- group: steph-variable-group
+
+steps:
+- task: CmdLine@2
+  inputs:
+    script: 'git pull https://stmarker@dev.azure.com/stmarker/test-project/_git/test-project master'
+
+- task: CmdLine@2
+  inputs:
+    script: 'git push https://$(steph-pat)@dev.azure.com/stmarker/test-project/_git/test-project HEAD:master'
