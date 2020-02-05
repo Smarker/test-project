@@ -16,4 +16,4 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'git push --mirror https://$(githubpersonaltoken)@github.com/Smarker/test-project.git'
+    script: 'git push --mirror https://$(githubpersonaltoken)@github.com/Smarker/test-project.git HEAD:master'
