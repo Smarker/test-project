@@ -1,0 +1,19 @@
+# update mirror
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+- group: steph-variable-group
+
+steps:
+- task: CmdLine@2
+  inputs:
+    script: 'git fetch -p origin'
+
+- task: CmdLine@2
+  inputs:
+    script: 'git push --mirror https://$(githubpersonaltoken)@github.com/Smarker/test-project.git'
